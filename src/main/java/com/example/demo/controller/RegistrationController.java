@@ -22,12 +22,12 @@ public class RegistrationController {
 
     @PostMapping("/init")
     public RegisterInitResponse init(@RequestBody RegisterInitRequest request) {
-        return registrationService.initRegistration(request.getMobile()); // service call
+        return registrationService.initRegistration(request.getMobile());
     }
 
     @PostMapping("/verify")
     public RegisterVerifyResponse verify(@RequestBody RegisterVerifyRequest request) {
-        return registrationService.verifyOtp(request.getMobile(), request.getOtp()); // call service
+        return registrationService.verifyOtp(request.getMobile(), request.getOtp());
     }
 
 }
